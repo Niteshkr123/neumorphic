@@ -50,8 +50,9 @@ class _NeuCalculatorButtonState extends State<NeuCalculatorButton> {
   Widget build(BuildContext context) {
     final neumorphicTheme = Provider.of<NeumorphicTheme>(context);
     final width = MediaQuery.of(context).size.width;
-    final squareSideLength = width / 5;
-    final buttonWidth = squareSideLength * (widget.isPill ? 2.2 : 1);
+    final squareSideLength = MediaQuery.of(context).size.height;
+   // final squareSideLength = width / 7;
+    final buttonWidth = squareSideLength * (widget.isPill ? 2.5 : 1);
     final buttonSize = Size(buttonWidth, squareSideLength);
 
     final innerShadow = ConcaveDecoration(
